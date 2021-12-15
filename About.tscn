@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Midnight.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://About.gd" type="Script" id=2]
+[ext_resource path="res://assets/White-Marble-herringbone-2186x8731mm-Architextures.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -23,6 +24,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -35,11 +45,11 @@ margin_right = 768.0
 margin_bottom = 963.0
 size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 1 )
-text = "nsdf
-sdfsdf
-dsfdfssfdsdf
-sadsddsa
-safafddfs"
+text = "	nsdf
+	sdfsdf
+	dsfdfssfdsdf
+	sadsddsa
+	safafddfs"
 
 [node name="Back" type="Button" parent="VSplitContainer"]
 margin_left = 677.0
