@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Midnight.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/White-Marble-herringbone-2186x8731mm-Architextures.jpg" type="Texture" id=2]
@@ -9,15 +9,12 @@ outline_size = 20
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 45
+outline_size = 5
+outline_color = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 1 )
-
-[node name="MarginContainer" type="MarginContainer"]
+[node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -30,45 +27,75 @@ margin_bottom = 1024.0
 texture = ExtResource( 2 )
 expand = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 768.0
-margin_bottom = 1024.0
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+split_offset = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="VSplitContainer"]
+margin_top = 20.0
 margin_right = 768.0
-margin_bottom = 279.0
-size_flags_vertical = 0
-custom_colors/font_color = Color( 0.854902, 0.0470588, 0.0470588, 1 )
+margin_bottom = 299.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Spider"
 align = 1
-percent_visible = -0.166667
 
-[node name="Options" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 283.0
+[node name="Options" type="CenterContainer" parent="VSplitContainer"]
+margin_top = 331.0
 margin_right = 768.0
 margin_bottom = 1024.0
-size_flags_vertical = 3
-alignment = 1
 
-[node name="Start" type="Button" parent="VBoxContainer/Options"]
-margin_top = 327.0
-margin_right = 768.0
-margin_bottom = 353.0
+[node name="Buttons" type="VBoxContainer" parent="VSplitContainer/Options"]
+margin_left = 309.0
+margin_top = 237.0
+margin_right = 459.0
+margin_bottom = 456.0
+
+[node name="Start" type="Button" parent="VSplitContainer/Options/Buttons"]
+margin_right = 150.0
+margin_bottom = 61.0
 custom_fonts/font = SubResource( 2 )
 text = "Start"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="About" type="Button" parent="VBoxContainer/Options"]
-margin_top = 357.0
-margin_right = 768.0
-margin_bottom = 383.0
-custom_fonts/font = SubResource( 3 )
+[node name="Spacer" type="Control" parent="VSplitContainer/Options/Buttons"]
+margin_top = 65.0
+margin_right = 150.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="About" type="Button" parent="VSplitContainer/Options/Buttons"]
+margin_top = 79.0
+margin_right = 150.0
+margin_bottom = 140.0
+custom_fonts/font = SubResource( 2 )
 text = "About"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Quit" type="Button" parent="VBoxContainer/Options"]
-margin_top = 387.0
-margin_right = 768.0
-margin_bottom = 413.0
-custom_fonts/font = SubResource( 4 )
+[node name="Spacer2" type="Control" parent="VSplitContainer/Options/Buttons"]
+margin_top = 144.0
+margin_right = 150.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Quit" type="Button" parent="VSplitContainer/Options/Buttons"]
+margin_top = 158.0
+margin_right = 150.0
+margin_bottom = 219.0
+custom_fonts/font = SubResource( 2 )
 text = "Quit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
