@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Object",
+"class": "CardType",
+"language": "GDScript",
+"path": "res://CardType.gd"
+} ]
+_global_script_class_icons={
+"CardType": ""
+}
+
 [application]
 
 config/name="Spider"
