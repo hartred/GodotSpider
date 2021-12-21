@@ -4,6 +4,8 @@ const CardType = preload("res://CardType.gd")
 
 var suit: int
 var rank: int
+var width: int = 0 setget ,get_width
+var height: int = 0 setget ,get_height
 
 const SUIT_RESOURCE_NAMES: Dictionary = {
     CardType.Suit.CLUB: "C",
@@ -11,6 +13,12 @@ const SUIT_RESOURCE_NAMES: Dictionary = {
     CardType.Suit.HEART: "H",
     CardType.Suit.SPADE: "S",
 }
+
+func get_width():
+    return $Sprite.texture.get_width()
+
+func get_height():
+    return $Sprite.texture.get_height()
 
 func _ready():
     pass
