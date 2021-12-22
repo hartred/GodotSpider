@@ -41,7 +41,7 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VSplitContainer"]
-margin_right = 768.0
+margin_right = 640.0
 margin_bottom = 963.0
 size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 1 )
@@ -52,9 +52,9 @@ text = "	nsdf
 	safafddfs"
 
 [node name="Back" type="Button" parent="VSplitContainer"]
-margin_left = 677.0
+margin_left = 549.0
 margin_top = 975.0
-margin_right = 768.0
+margin_right = 640.0
 margin_bottom = 1024.0
 size_flags_horizontal = 8
 custom_fonts/font = SubResource( 2 )

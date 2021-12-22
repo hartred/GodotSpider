@@ -5,7 +5,7 @@
 [ext_resource path="res://Menu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 230
+size = 190
 outline_size = 20
 font_data = ExtResource( 1 )
 
@@ -24,14 +24,15 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 768.0
-margin_bottom = 1024.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 1.0
 split_offset = 40
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,8 +40,8 @@ __meta__ = {
 
 [node name="Title" type="Label" parent="VSplitContainer"]
 margin_top = 20.0
-margin_right = 768.0
-margin_bottom = 299.0
+margin_right = 641.0
+margin_bottom = 250.0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -48,15 +49,15 @@ text = "Spider"
 align = 1
 
 [node name="Options" type="CenterContainer" parent="VSplitContainer"]
-margin_top = 331.0
-margin_right = 768.0
+margin_top = 282.0
+margin_right = 641.0
 margin_bottom = 1024.0
 
 [node name="Buttons" type="VBoxContainer" parent="VSplitContainer/Options"]
-margin_left = 309.0
-margin_top = 237.0
-margin_right = 459.0
-margin_bottom = 456.0
+margin_left = 245.0
+margin_top = 261.0
+margin_right = 395.0
+margin_bottom = 480.0
 
 [node name="Start" type="Button" parent="VSplitContainer/Options/Buttons"]
 margin_right = 150.0

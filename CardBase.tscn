@@ -6,6 +6,7 @@
 extents = Vector2( 32, 45 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_mask = 0
 input_pickable = true
 script = ExtResource( 2 )
 
