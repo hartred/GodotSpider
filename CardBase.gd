@@ -3,7 +3,7 @@ extends KinematicBody2D
 const CardType = preload("res://CardType.gd") 
 
 var suit: int
-var rank: int
+var rank: int setget ,get_rank
 var width: int = 0 setget ,get_width
 var height: int = 0 setget ,get_height
 
@@ -19,6 +19,9 @@ func get_width():
 
 func get_height():
     return $Sprite.texture.get_height()
+    
+func get_rank():
+    return rank
 
 func _ready():
     pass
@@ -31,3 +34,6 @@ func init_type(init_suit: int, init_rank: int) -> void:
         self.SUIT_RESOURCE_NAMES[self.suit]
     ]
     $Sprite.texture = load(resource_string)
+
+func is_rank_higher_by_one_point(other_card):
+    return self.rank - other_card.rank == 1
